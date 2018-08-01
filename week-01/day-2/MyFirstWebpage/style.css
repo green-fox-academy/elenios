@@ -1,0 +1,60 @@
+#background {
+    background-image: url(topography.png);
+}
+
+#main {
+    margin: auto;
+    width: 75%;
+}
+
+.box {
+    margin: 0px;
+    padding: 0px 0px;
+    border: 0px;
+    color: rgb(255, 0, 148);
+    background-color: rgb(41, 39, 39);
+    text-align: right;
+    word-spacing: 20px;
+    line-height: 35px;
+    width: 100%;
+}
+.padding {
+    padding-left: 12.5%;
+    padding-right: 14%;
+}
+
+h1 {  
+    font-size: 40px;
+    font-weight: 700;
+    font-family: 'Merriweather', serif;
+    margin-top: 80px;
+  }
+
+h2 {
+  color: rgb(255, 0, 148);  
+  font-family: 'Merriweather', serif;
+  font-weight: 575;
+}
+
+h3 {
+    font-family: 'Merriweather', serif;
+    font-size: 25px;
+    font-weight: 700;
+  }
+
+.title {    
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.aaa {
+    text-align: center;
+    font-size: 30px;
+}
+
+p {
+    font-family: 'consolas', 'courier';
+    font-weight: 550;
+    font-size: 20px;
+}
