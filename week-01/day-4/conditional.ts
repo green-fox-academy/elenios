@@ -5,9 +5,9 @@
 let a: number = 24;
 let out: number = 0;
 
-if (a == 24) {
+if (a % 2 == 0) {
     out += 1;
-
+    console.log(out)
 }
 
 

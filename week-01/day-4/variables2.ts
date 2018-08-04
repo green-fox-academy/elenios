@@ -69,7 +69,7 @@ let currentMinutes: number = 34;
 let currentSeconds: number = 42;
 let currentTimeInSeconds: number = currentSeconds + currentMinutes * 60 + currentHours * 60 * 60;
 let dayInSeconds: number = 24 * 60 * 60;
-let remainingSeconds: number = dayInSeconds - currentTimeInSeconds);
+let remainingSeconds: number = dayInSeconds - currentTimeInSeconds;
 console.log(remainingSeconds);
 
 
