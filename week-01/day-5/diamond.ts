@@ -13,10 +13,14 @@
 //
 // The diamond should have as many lines as lineCount is
 
-let lineCount: number = 21;
+let lineCount: number = 22;
 let lineCount2: number = Math.ceil(lineCount/2);
 let csillagocska: string = "*"
 let helyecske: string = "";
+
+if (lineCount % 2 == 0 ) {
+    lineCount -= 1;
+}
 
 while (lineCount > 0) {
     helyecske = "";
