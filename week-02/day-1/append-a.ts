@@ -4,6 +4,11 @@
 
 let animals = ["koal", "pand", "zebr"];
 
-animals.concat("a")
 
-console.log(animals);
+
+let animalsA = animals.map(function(elem: string) {
+    return elem + "a"
+});
+
+console.log(animalsA);
+
