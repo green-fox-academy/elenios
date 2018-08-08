@@ -12,7 +12,7 @@ const ctx = canvas.getContext('2d');
 
 function drawRectangle(x: number, ) {
     for (let i = 0; i < 3; i++) {
-        ctx.strokeRect((canvas.width / 2) - x * i / 2, (canvas.height / 2) - x * i / 2, x * i + 1, x * i + 1);
+        ctx.strokeRect((canvas.width / 2) - (x / 2) * (i + 1), (canvas.height / 2) - (x / 2) * (i + 1), x * (i + 1), x * (i + 1));
     }
 }
 drawRectangle(100);
