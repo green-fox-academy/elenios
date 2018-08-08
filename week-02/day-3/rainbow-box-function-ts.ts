@@ -24,3 +24,18 @@ function drawRectangle(x: number, color: string[]) {
     }
 }
 drawRectangle(50, rainbow);
+
+/*
+function rainBowBox(lineWidth) {
+    let rainbowColors: string[] = ['red', 'orange', 'yellow', 'lawngreen', 'dodgerblue', 'mediumblue', 'darkviolet'];
+    function drawSquare(size: number, color: string) {
+        ctx.fillStyle = color;
+        ctx.fillRect(canvas.width / 2 - size / 2, canvas.height / 2 - size / 2, size, size);
+    }
+
+    for (let i: number = 400; i > 0; i -= lineWidth) {
+        drawSquare(i, rainbowColors[i % rainbowColors.length]); 
+    }
+}
+rainBowBox(100);
+*/
