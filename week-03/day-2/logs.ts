@@ -28,19 +28,48 @@ function uniqueIPs(file: string): any {
     }
   }
   return uniqueIPs;
-
-  /*uniqueIPs = IPs.filter(function (elem, index, self) {
-    return index === self.indexOf(elem);
-  })*/
-
-
-  /*
-    try {
-      return true;
-    } catch {
-      return false;
-    }
-    */
 }
 
-console.log(uniqueIPs('log.txt'));
+function ratio(file: string): any {
+  let baseArray = (fs.readFileSync(file, charBase).split('\r\n'));
+  let baseArray2 = [];
+  let GETandPOST = [];
+  let getCount = 0;
+  let postCount = 0;
+
+  baseArray.forEach(element => {
+    baseArray2.push(element.split('   '));
+  });
+  baseArray2.forEach(element => {
+    GETandPOST.push(element[2]);
+  });
+
+  GETandPOST.forEach(element => {
+    if (element == 'GET /') {
+      getCount++
+    } else if (element == 'POST /'){
+      postCount++
+    }
+  });
+  let ratio = getCount / postCount
+
+
+  return 'The ratio of GET and POST is: ' + ratio;
+}
+
+/*uniqueIPs = IPs.filter(function (elem, index, self) {
+  return index === self.indexOf(elem);
+})*/
+
+
+/*
+  try {
+    return true;
+  } catch {
+    return false;
+  }
+  */
+
+
+//console.log(uniqueIPs('log.txt'));
+console.log(ratio('log.txt'));
