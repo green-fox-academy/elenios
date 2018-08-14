@@ -18,7 +18,7 @@ function fox(list: number[][]) {
 
     for (let i = 0; i < list.length; i++) {
 
-        if (i == list.length-1) {
+        if (i == list.length - 1) {
             ctx.strokeStyle = 'green';
             ctx.beginPath();
             ctx.moveTo(list[i][0], list[i][1]);

@@ -9,7 +9,7 @@ const ctx = canvas.getContext('2d');
 
 function drawSquare(side: number) {
     ctx.fillStyle = 'purple';
-    for (let i = 0; 20 > i ; i++) {
+    for (let i = 0; 20 > i; i++) {
         ctx.fillRect(side + i * side, side + i * side, side, side);
     }
 }

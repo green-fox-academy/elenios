@@ -10,7 +10,7 @@ const ctx = canvas.getContext('2d');
 // Create a loop that fills the canvas with rainbow colored squares.
 
 let rainbow = ['red', 'orange', 'yellow', 'green', 'cyan', 'blue', 'purple', 'pink'];
-
+/*
 function drawRectangle(x: number, color: string[]) {
     color.reverse();
     for (let i = 9; i > 1; i--) {
@@ -24,8 +24,8 @@ function drawRectangle(x: number, color: string[]) {
     }
 }
 drawRectangle(50, rainbow);
+*/
 
-/*
 function rainBowBox(lineWidth) {
     let rainbowColors: string[] = ['red', 'orange', 'yellow', 'lawngreen', 'dodgerblue', 'mediumblue', 'darkviolet'];
     function drawSquare(size: number, color: string) {
@@ -33,9 +33,8 @@ function rainBowBox(lineWidth) {
         ctx.fillRect(canvas.width / 2 - size / 2, canvas.height / 2 - size / 2, size, size);
     }
 
-    for (let i: number = 400; i > 0; i -= lineWidth) {
-        drawSquare(i, rainbowColors[i % rainbowColors.length]); 
+    for (let i: number = canvas.height; i > 0; i -= lineWidth) {
+        drawSquare(i, rainbowColors[i / lineWidth % rainbowColors.length]); 
     }
 }
-rainBowBox(100);
-*/
+rainBowBox(20);
