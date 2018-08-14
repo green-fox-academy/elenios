@@ -19,8 +19,8 @@ function countLines(fileName: string): any {
     return counter;
 
   } catch (e) {
-  return 0;
-}
+    return 0;
+  }
 }
 
 console.log(countLines('myspace.txt'));
