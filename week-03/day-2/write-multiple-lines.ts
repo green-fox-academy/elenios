@@ -25,8 +25,8 @@ function writeMultipleLines(pathOfFile: string, inputString: string, numberOfLin
     fs.readFileSync(pathOfFile, 'utf-8');
     fs.writeFileSync(pathOfFile, input);
   } catch (error) {
-    return ''
+    
   }
 }
 
-console.log(writeMultipleLines('./multiple.txt', 'Green Fox', 13113));
+console.log(writeMultipleLines('./muliple.txt', 'Green Fox', 13113));
