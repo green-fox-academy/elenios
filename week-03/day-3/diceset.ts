@@ -39,6 +39,7 @@ class DiceSet {
 
 let diceSet = new DiceSet();
 diceSet.roll();
+diceSet.getCurrent();
 
 for (let i = 0; i < diceSet.numOfDices; i++) {
   while (diceSet.dices[i] !== 6){
