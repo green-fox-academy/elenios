@@ -61,7 +61,6 @@ function ratio(file: string): any {
   return index === self.indexOf(elem);
 })*/
 
-
 /*
   try {
     return true;
@@ -70,6 +69,5 @@ function ratio(file: string): any {
   }
   */
 
-
-//console.log(uniqueIPs('log.txt'));
+console.log(uniqueIPs('log.txt'));
 console.log(ratio('log.txt'));

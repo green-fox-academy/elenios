@@ -17,7 +17,7 @@ function readFromFile(fileName: string): string {
 
 function writeToAFile (fileName: string, data: string): void {
   fs.writeFileSync(fileName, data);
-}
+} 
 
 writeToAFile('he')
 
