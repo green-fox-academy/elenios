@@ -9,9 +9,9 @@ Every animal can play() which increases both by one
 */
 
 class Animal {
-  hunger: number;
-  thirst: number;
-  constructor(hunger: number, thirst: number) {
+  private hunger: number;
+  private thirst: number;
+  constructor() {
     this.hunger = 50;
     this.thirst = 50;
   }
@@ -26,3 +26,6 @@ class Animal {
     this.thirst++
   }
 }
+
+var animal = new Animal()
+console.log(animal);
