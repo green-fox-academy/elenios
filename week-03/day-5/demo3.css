@@ -1,7 +1,7 @@
 
 #body {
     background-image: url(bg.png);
-    background-size: cover; 
+    background-size: 100%; 
     background-repeat: no-repeat;
 }
 .order {
@@ -107,8 +107,8 @@
 .box2 { 
     
     display: inline-block;
-    width: 1000px;
-    height: 700px;
+    width: 900px;
+    height: 600px;
     margin-right: 40px;
     border: 5px solid #000;
     background-image: url(why.jpg);
@@ -133,10 +133,20 @@
   height: 650px;
   margin: 0px;
   border: 5px solid #000;
-  background-image: url(personal.PNG);
+  background-image: url(Gandalf.PNG);
   background-size: cover;
 }
 
+.box5 {
+
+  display: inline-block;
+  width: 1000px;
+  height: 700px;
+  margin: 0px;
+  border: 0px solid #000;
+  background-image: url();
+  background-size: cover;
+}
   .conclusion {
         display: inline-block;
         width: 800px;
