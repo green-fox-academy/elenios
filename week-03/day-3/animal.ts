@@ -9,11 +9,11 @@ Every animal can play() which increases both by one
 */
 
 class Animal {
-  private hunger: number;
-  private thirst: number;
+  hunger: number;
+  thirst: number;
   constructor() {
-    this.hunger = 50;
-    this.thirst = 50;
+    this.hunger = Math.ceil(Math.random() * 5);
+    this.thirst = Math.ceil(Math.random() * 5);
   }
   eat() {
     this.hunger--
@@ -29,3 +29,5 @@ class Animal {
 
 var animal = new Animal()
 console.log(animal);
+
+export { Animal };

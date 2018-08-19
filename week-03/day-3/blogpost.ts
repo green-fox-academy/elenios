@@ -35,4 +35,4 @@ console.log(blogPost);
 console.log(blogPost2);
 console.log(blogPost3);
 
-
+export { BlogPost };
