@@ -17,34 +17,70 @@ import { Pirate } from './pirates'
 class Ship {
   captain: Pirate = new Pirate;
   crew: Pirate[] = [];
-  
+
   fillShip() {
-   let numberOfPirates = Math.ceil(Math.random() * 10);
-   let captain = this.captain;
-   for (let i = 0; i < numberOfPirates; i++) {
-     this.crew.push(new Pirate);
-   }
+    let numberOfPirates = Math.ceil(Math.random() * 10);
+    let captain = this.captain;
+    for (let i = 0; i < numberOfPirates; i++) {
+      this.crew.push(new Pirate);
+    }
   }
-  getInfo () {
+  getInfo() {
     if (this.captain.alive === true && this.captain.awaken === true) {
-    console.log('The state of the captain: Alive and Awoken. Amount of rum consumed: ' + this.captain.intoxication);
+      console.log('The state of the captain: Alive and Awoken. Amount of rum consumed: ' + this.captain.intoxication);
     } else if (this.captain.alive === true && this.captain.awaken === false) {
-      console.log('The state of the captain: Alive, but passed out. Amount of rum consumed: ' + this.captain.intoxication);      
+      console.log('The state of the captain: Alive, but passed out. Amount of rum consumed: ' + this.captain.intoxication);
     } else if (this.captain.alive === false) {
       console.log('The state of the captain: Dead.');
     }
     let counterOfAlivePirates = 0;
     for (let i = 0; i < this.crew.length; i++) {
       if (this.crew[i].alive === true)
-      counterOfAlivePirates++
+        counterOfAlivePirates++
     }
     console.log('Number of alive pirates: ' + counterOfAlivePirates);
   }
+  battle(otherShip: Ship) {
+    let rounds: number = this.crew.length;
+    if (this.crew.length > otherShip.crew.length) {
+      rounds = otherShip.crew.length
+    }
+    this.captain.brawl(otherShip.captain);
+    for (let i = 0; i < rounds; i++) {
+      this.crew[i].brawl(otherShip.crew[i]);
+    }
+    let scoreOfThisShip = 0;
+    let scoreOfOtherShip = 0;
+    scoreOfThisShip += this.captain.intoxication;
+    scoreOfOtherShip += otherShip.captain.intoxication;
+    this.crew.forEach(element => {
+      if (element.alive == true) {
+        scoreOfThisShip++
+      }
+    });
+    otherShip.crew.forEach(element => {
+      if (element.alive == true) {
+        scoreOfOtherShip++
+      }
+    });
+    if (scoreOfThisShip > scoreOfOtherShip) {
+      console.log('WIN');      
+      return true;
+    } else {
+      console.log('LOSE');
+      return false;
+    }
+  }
+
 }
 
-let ship = new Ship;
-ship.fillShip();
-ship.captain.drinkSomeRum();
-ship.captain.drinkSomeRum();
-ship.captain.howsItGoingMate();
-ship.getInfo();
+
+let redSnakes = new Ship;
+let blackBlades = new Ship;
+redSnakes.fillShip();
+blackBlades.fillShip();
+redSnakes.getInfo();
+blackBlades.getInfo();
+redSnakes.battle(blackBlades);
+redSnakes.getInfo();
+blackBlades.getInfo();

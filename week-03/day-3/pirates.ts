@@ -39,17 +39,17 @@ class Pirate {
   die() {
     this.alive = false;
   }
-  brawl(Pirate) {
+  brawl(otherPirate: Pirate) {
     if (this.alive = true) {
-      if (Pirate.alive == true) {
+      if (otherPirate.alive == true) {
         let fate: number = Math.ceil(Math.random() * 3);
         if (fate == 1) {
           this.die();
         } else if (fate == 2) {
-          Pirate.die();
+          otherPirate.die();
         } else if (fate == 3) {
           this.awaken = false;
-          Pirate.awaken = false;
+          otherPirate.awaken = false;
         }
       } else {
         console.log('The opponent Pirate is dead.');
