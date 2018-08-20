@@ -15,5 +15,36 @@
 import { Pirate } from './pirates'
 
 class Ship {
-
+  captain: Pirate = new Pirate;
+  crew: Pirate[] = [];
+  
+  fillShip() {
+   let numberOfPirates = Math.ceil(Math.random() * 10);
+   let captain = this.captain;
+   for (let i = 0; i < numberOfPirates; i++) {
+     this.crew.push(new Pirate);
+   }
+  }
+  getInfo () {
+    if (this.captain.alive === true && this.captain.awaken === true) {
+    console.log('The state of the captain: Alive and Awoken. Amount of rum consumed: ' + this.captain.intoxication);
+    } else if (this.captain.alive === true && this.captain.awaken === false) {
+      console.log('The state of the captain: Alive, but passed out. Amount of rum consumed: ' + this.captain.intoxication);      
+    } else if (this.captain.alive === false) {
+      console.log('The state of the captain: Dead.');
+    }
+    let counterOfAlivePirates = 0;
+    for (let i = 0; i < this.crew.length; i++) {
+      if (this.crew[i].alive === true)
+      counterOfAlivePirates++
+    }
+    console.log('Number of alive pirates: ' + counterOfAlivePirates);
+  }
 }
+
+let ship = new Ship;
+ship.fillShip();
+ship.captain.drinkSomeRum();
+ship.captain.drinkSomeRum();
+ship.captain.howsItGoingMate();
+ship.getInfo();

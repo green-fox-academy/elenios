@@ -19,16 +19,13 @@ class Farm {
     }
   }
   slaughter() {
-    let leastHungry = this.listOfAnimals[0].hunger
-    let index = 0;
+    let leastHungry = this.listOfAnimals[0]
     for (let i = 0; i < this.listOfAnimals.length; i++) {
-      if (this.listOfAnimals[i].hunger < leastHungry) {
-        leastHungry = this.listOfAnimals[i].hunger
-        index = i;
+      if (this.listOfAnimals[i].hunger < leastHungry.hunger) {
+        leastHungry = this.listOfAnimals[i]
       }
     }
-    this.listOfAnimals.splice(index,1)
-    //this.listOfAnimals.splice(this.listOfAnimals.indexOf(leastHungry), 1);
+    this.listOfAnimals.splice(this.listOfAnimals.indexOf(leastHungry), 1);
   }
 }
 

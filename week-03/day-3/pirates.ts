@@ -13,18 +13,51 @@
 // Add a parrot.
 
 class Pirate {
-  drinkSomeRum() {
+  intoxication: number = 0;
+  awaken: boolean = true;
+  alive: boolean = true;
 
+  drinkSomeRum() {
+    if (this.alive = true) {
+      this.intoxication += Math.ceil(Math.random() * 5)
+    } else {
+      console.log('This Pirate is dead');
+    }
   }
   howsItGoingMate() {
-
+    if (this.alive = true) {
+      if (this.intoxication <= 4) {
+        console.log('"Pour me anudder!"');
+      } else {
+        console.log('"Arghh, I\'ma Pirate. How d\'ya d\'ink its goin?"');
+        this.awaken = false;
+      }
+    } else {
+      console.log('This Pirate is dead');
+    }
   }
   die() {
-
+    this.alive = false;
   }
-  brawl() {
-
+  brawl(Pirate) {
+    if (this.alive = true) {
+      if (Pirate.alive == true) {
+        let fate: number = Math.ceil(Math.random() * 3);
+        if (fate == 1) {
+          this.die();
+        } else if (fate == 2) {
+          Pirate.die();
+        } else if (fate == 3) {
+          this.awaken = false;
+          Pirate.awaken = false;
+        }
+      } else {
+        console.log('The opponent Pirate is dead.');
+      }
+    } else {
+      console.log('This Pirate is dead');
+    }
   }
+
 }
-
 export { Pirate };
