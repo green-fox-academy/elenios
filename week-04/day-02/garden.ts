@@ -16,6 +16,7 @@ export class Garden {
     console.log(plant);
     this.plants.push(plant);
   }
+
   getInfo() {
     this.plants.forEach(element => {
       if (element.waterLevel < element.wateringAt) {
@@ -25,18 +26,18 @@ export class Garden {
       }
     });
   }
-
+  
   watering(waterAmount: number) {
     console.log(`Watering with ${waterAmount}`);
-    let counter = 0;
+    let plantsNeedWater = 0;
     this.plants.forEach(element => {
       if (element.waterLevel < element.wateringAt) {
-        counter++
+        plantsNeedWater++
       }
     });
     this.plants.forEach(element => {
       if (element.waterLevel < element.wateringAt) {
-        element.waterLevel += (waterAmount / counter) * element.waterAbsorb
+        element.waterLevel += (waterAmount / plantsNeedWater) * element.waterAbsorb
       }
     });
   }

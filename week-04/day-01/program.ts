@@ -23,7 +23,7 @@ let elon = new Sponsor('Elon Musk', 46, 'male', 'SpaceX');
 people.push(elon);
 
 student.skipDays(3);
-
+  
 for (let i = 0; i < 6; i++) {
   elon.hire();
 }
