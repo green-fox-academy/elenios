@@ -26,3 +26,5 @@ ctx.beginPath();
 ctx.moveTo(10, canvas.height / 2);
 ctx.lineTo(canvas.width / 4, 10);
 ctx.stroke();
+
+ ctx.rotate(120);

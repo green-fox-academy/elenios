@@ -12,7 +12,7 @@
 
 // Add a parrot.
 
-class Pirate {
+export class Pirate {
   intoxication: number = 0;
   awaken: boolean = true;
   alive: boolean = true;
@@ -58,6 +58,4 @@ class Pirate {
       console.log('This Pirate is dead');
     }
   }
-
 }
-export { Pirate };

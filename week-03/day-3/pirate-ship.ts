@@ -14,12 +14,12 @@
 // The winner captain and crew has a party, including a random number of rum :)
 import { Pirate } from './pirates'
 
-class Ship {
+export class Ship {
   captain: Pirate = new Pirate;
   crew: Pirate[] = [];
 
   fillShip() {
-    let numberOfPirates = Math.ceil(Math.random() * 10);
+    let numberOfPirates = Math.ceil(Math.random() * 20);
     let captain = this.captain;
     for (let i = 0; i < numberOfPirates; i++) {
       this.crew.push(new Pirate);
@@ -73,8 +73,7 @@ class Ship {
   }
 
 }
-
-
+/*
 let redSnakes = new Ship;
 let blackBlades = new Ship;
 redSnakes.fillShip();
@@ -84,3 +83,4 @@ blackBlades.getInfo();
 redSnakes.battle(blackBlades);
 redSnakes.getInfo();
 blackBlades.getInfo();
+*/

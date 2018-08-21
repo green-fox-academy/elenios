@@ -13,15 +13,15 @@ class Student {
 
   }
   question(Teacher) {
-Teacher.answer()
+    Teacher.answer()
   }
 }
 
 class Teacher {
   teach(Student) {
-Student.learn
+    Student.learn
   }
-  answer(){
-    
+  answer() {
+
   }
 }
