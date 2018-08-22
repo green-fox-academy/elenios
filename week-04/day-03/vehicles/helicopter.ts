@@ -13,9 +13,10 @@ export class Helicopter extends Vehicle implements Flyable {
   }
 
   fly(distanceInKm: number) {
-    if (this.fuel >= distanceInKm/10) {
-    this.fuel -= distanceInKm/10;
-    console.log(`${this.name} flew ${distanceInKm}km and burnt ${distanceInKm/10}l fuel.`);
+    let consumption: number = distanceInKm / 10;
+    if (this.fuel >= consumption) {
+      this.fuel -= consumption;
+      console.log(`${this.name} flew ${distanceInKm}km and burnt ${consumption}l fuel.`);
     } else {
       console.log(`There is not enough fuel for the desired distance, please refill the tank.`);
     }

@@ -16,7 +16,7 @@ export class Eagle extends Bird {
       this.happiness = 0;
       return new Egg('eagleEgg');
     } else {
-      console.log(`${this.name} is not in the mood of breeding.`);
+      throw new Error(`${this.name} is not in the mood of breeding.`);
     }
   }
 

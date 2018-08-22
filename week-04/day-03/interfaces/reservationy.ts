@@ -1,6 +1,6 @@
 'use strict'
 
-interface Reservationy {
+export interface Reservationy {
   getDowBooking(): string;
   getCodeBooking(): string;
 }

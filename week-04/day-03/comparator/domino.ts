@@ -1,3 +1,5 @@
+import { Comparable } from '../../comparable'
+
 class Domino implements Comparable {
 
   values: number[];
@@ -6,7 +8,7 @@ class Domino implements Comparable {
   }
 
   compareTo(other: Comparable): number {
-    if (this.values[1] > other.) {
+    if (this.values[0] > other.values[0]) {
       return 1;
     } else if () {
       return 0;
@@ -15,6 +17,5 @@ class Domino implements Comparable {
     }
   }
 }
-
 
 export { Domino };
