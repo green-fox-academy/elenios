@@ -9,7 +9,13 @@
 import { Ship } from "./pirate-ship"
 
 class Armada {
-  listOfShips: Ship[] = [];
+  name: string;
+  listOfShips: Ship[]
+
+  constructor(name: string) {
+    this.name = name;
+    this.listOfShips = [];
+  }
 
   fillArmada() {
     let numberOfShips = Math.ceil(Math.random() * 10);
@@ -20,20 +26,36 @@ class Armada {
       element.fillShip();
     });
   }
-  
-  // war(otherArmada) {
-    //   let sortedListOfThisShip = this.listOfShips.crew.sort();
-    //   let sortedListOfOtherShip = otherArmada.listOfShips.sort();
-    //   console.log(sortedListOfThisShip);
-    // console.log(sortedListOfOtherShip);
-    
-    
-    // }
+
+  war(otherArmada: Armada) {
+    let group1 = this.listOfShips;
+    let group2 = otherArmada.listOfShips;
+
+    while (group1.length > 0 || group2.length > 0) {
+      if (group1[0].battle(group2[0]) === true) {
+        group2.splice(0, 1);
+        console.log(`\r\nThe ${otherArmada.name} has lost a ship.`);
+        console.log(`The remaining ships of ${this.name}: ${group1.length}`);
+        console.log(`The remaing ships of ${otherArmada.name}: ${group2.length}`);        
+      } else if (group1[0].battle(group2[0]) === false) {
+        group1.splice(0, 1);
+        console.log(`\r\nThe ${this.name} has lost a ship!`);
+        console.log(`The remaining ships of ${this.name}: ${group1.length}`);
+        console.log(`The remaing ships of ${otherArmada.name}: ${group2.length}`); 
+      }
+      if (group1.length == 0) {
+        console.log(`\r\nTHE ${this.name.toUpperCase()} HAS LOST THE WAR.\r\nThe armada of the ${otherArmada.name} is throwing a victorious party and getting drunk af.\r\n`);
+        return false;
+      } else if (group2.length == 0) {
+        console.log(`\r\nTHE ${this.name.toUpperCase()} HAS WON THE WAR!\r\nThe armada of the ${otherArmada.name} is crushed to ashes.\r\n`);
+        return true;
+      }
+    }
   }
-  
-  let snakes = new Armada;
-  let blades = new Armada;
-  snakes.fillArmada();
-  console.log(snakes.listOfShips);
+}
+
+let snakes = new Armada('snakes');
+let blades = new Armada('blades');
+snakes.fillArmada();
 blades.fillArmada();
-//snakes.war(blades);
+snakes.war(blades);

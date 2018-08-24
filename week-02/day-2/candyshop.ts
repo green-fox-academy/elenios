@@ -7,4 +7,18 @@ let shopItems: any[] = ['Cupcake', 2, 'Brownie', false];
 // No, don't just remove the items :)
 // Create a function called sweets() which takes the list as a parameter.
 // Expected output: "Cupcake", "Croissant", "Brownie", "Ice cream"
+
+function sweets(list: any[]) {
+
+    let index = list.indexOf(2);
+    let index2 = list.indexOf(false);
+    list.splice(index,1,'Croissant');
+    list.splice(index2,1,'Ice cream');
+
+    return list;
+}
+
+console.log(sweets(shopItems));
+
+
 export = sweets;

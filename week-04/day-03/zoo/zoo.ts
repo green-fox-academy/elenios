@@ -1,7 +1,7 @@
 import { Animal } from "./animal";
 import { Eagle } from "./eagle";
 import { Crocodile } from "./crocodile";
-import { Koala } from "./koala";
+import { Giraffe } from "./giraffe";
 
 'use strict'
 
@@ -18,7 +18,6 @@ class Zoo {
     this.animals.push(animal);
   }
 
-
 }
 
 let zoo = new Zoo('Zooland');
@@ -30,12 +29,25 @@ let crocodile1 = new Crocodile('Croco boy', 2, 'male');
 let crocodile2 = new Crocodile('Croco girl', 2, 'female');
 zoo.add(crocodile1);
 zoo.add(crocodile2);
-let koala1 = new Koala('Koala boy', 3, 'male');
-let koala2 = new Koala('Koala girl', 5, 'female');
-zoo.add(koala1);
-zoo.add(koala2);
+let giraffe1 = new Giraffe('Giraffe boy', 3, 'male');
+let giraffe2 = new Giraffe('Giraffe girl', 5, 'female');
+zoo.add(giraffe1);
+zoo.add(giraffe2);
 
 console.log("How do you breed?");
 console.log("A " + crocodile1.getName() + " is breeding by " + crocodile1.breedingMethod());
-console.log("A " + koala1.getName() + " is breeding by " + koala1.breedingMethod());
+console.log("A " + giraffe1.getName() + " is breeding by " + giraffe1.breedingMethod());
 console.log("A " + eagle1.getName() + " is breeding by " + eagle1.breedingMethod());
+
+console.log(giraffe1);
+
+let babygiraffe1: Giraffe = giraffe1.breed(giraffe2);
+giraffe1.play();
+
+giraffe1.play(giraffe2);
+
+let babygiraffe2: Giraffe = giraffe1.breed(giraffe2);
+
+console.log(babygiraffe1);
+console.log(babygiraffe2);
+

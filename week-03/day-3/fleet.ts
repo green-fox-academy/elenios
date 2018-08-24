@@ -1,10 +1,15 @@
 import { Thing } from "./things";
+import { Printable } from "../../week-04/day-03/interfaces/printable";
 
-class Fleet {
+class Fleet implements Printable {
   private things: Thing[];
 
   constructor() {
     this.things = [];
+  }
+
+  printAllFields() {
+    console.log(this.things);        
   }
 
   add(thing: Thing) {

@@ -21,13 +21,20 @@ export abstract class Animal {
     return this.name;
   }
 
-  play(other: Animal) {
+  play(other?: Animal) {
     if (other) {
-      this.satiety -= 3;
-      this.energy -= 3;
+      this.satiety -= 1;
+      this.energy -= 1;
+      this.happiness += 5;
+      other.satiety -= 1;
+      other.energy -= 1;
+      other.happiness += 5;
+    } else {
+      this.satiety -= 1;
+      this.energy -= 1;
       this.happiness += 3;
-    }
-  } else
+  }
+}
 
   eat() {
     this.satiety += 5;

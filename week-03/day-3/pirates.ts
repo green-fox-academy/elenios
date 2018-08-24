@@ -51,11 +51,7 @@ export class Pirate {
           this.awaken = false;
           otherPirate.awaken = false;
         }
-      } else {
-        console.log('The opponent Pirate is dead.');
       }
-    } else {
-      console.log('This Pirate is dead');
     }
   }
-}
+} 

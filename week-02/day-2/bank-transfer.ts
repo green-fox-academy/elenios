@@ -98,6 +98,7 @@ function accountCheck(accountList, senderAccNum: number, receiverAccNum: number,
     return message;
 }
 
+console.log(accounts.indexOf('accountNumber'));
 
 console.log(getNameAndBalance(11234543));
 console.log(transferAmount(accounts, sender, receiver, amount));

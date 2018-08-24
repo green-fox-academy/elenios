@@ -6,13 +6,13 @@ import { Reservationy } from '../interfaces/reservationy'
   characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
 
   getDowBooking(): string {
-    let randomNumber = Math.floor(Math.random() * 7);
+    let randomNumber: number = Math.floor(Math.random() * 7);
     return this.DOW[randomNumber];
   }
 
   getCodeBooking(): string {
-    let arrayOfCharacters = this.characters.split('')
-    let arrayOfCode = [];
+    let arrayOfCharacters: any[] = this.characters.split('')
+    let arrayOfCode: any[] = [];
     for (let i = 8; i < 8; i++) {
       arrayOfCode.push(arrayOfCharacters.splice(Math.floor(Math.random() * 36), 0));
     }

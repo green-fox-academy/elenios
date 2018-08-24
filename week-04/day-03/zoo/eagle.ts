@@ -19,7 +19,7 @@ export class Eagle extends Bird {
       throw new Error(`${this.name} is not in the mood of breeding.`);
     }
   }
-
+  
   brood(egg: Egg) {
     egg = undefined;
     return new Eagle('Eagle Baby', 0, 'male')

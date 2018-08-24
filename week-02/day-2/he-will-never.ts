@@ -2,7 +2,7 @@
 // Things are a little bit messed up
 // Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
 // Assemble the fragments into the out variable
-let out: string = '';
+let rickRolled: string = '';
 let notSoCrypticMessage: number[] = [1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11];
 
 let hashmap = {
@@ -16,4 +16,9 @@ let hashmap = {
   3: 'say goodbye '
 };
 
-console.log(out)
+
+for (let i = 0; i < notSoCrypticMessage.length; i++) {
+  rickRolled += hashmap[notSoCrypticMessage[i]];
+}
+
+console.log(rickRolled)
