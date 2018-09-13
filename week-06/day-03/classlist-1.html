@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: ClassList</title>
+  <style>
+    .red {
+      color: red;
+    }
+
+    .balloon {
+      background-color: lime;
+      border-radius: 100%;
+    }
+
+    .pear {
+      background: lime;
+      padding: 2rem;
+      text-decoration: uppercase;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="apple">apple</p>
+  <p class="balloon">balloon</p>
+  <p class="cat red-dot">cat</p>
+  <p>dolphin</p>
+
+  <script>
+
+    const ps = document.querySelectorAll('p');
+
+    if (ps[3].classList.contains('dolphin')) {
+      ps.forEach(element => { 
+        if (element.classList.contains('apple')){ element.innerText = 'pear' }}); 
+    } else if (ps[0].classList.contains('apple')) {
+      ps.forEach(element => { 
+        if (element.classList.contains('cat')){ element.innerText = 'dog' }}); 
+    }
+
+    document.getElementsByClassName('apple')[0].classList.add('red');
+    document.getElementsByClassName('balloon')[0].setAttribute('style', 'border-radius: 10%')
+
+
+ 
+
+  </script>
+
+</body>
+
+</html>

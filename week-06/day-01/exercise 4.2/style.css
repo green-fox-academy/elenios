@@ -1,0 +1,51 @@
+body {
+  height: 95vh;
+}
+
+.head {
+  display: flex;
+  list-style-type: none;
+  background-color: purple;
+  width: auto ;
+  height: 10%;
+  align-items: center;
+}
+
+.nav {
+  background-color: cyan;
+  width: 10%;
+  height: 50%;
+  justify-content: flex-start;
+  margin-right: 20px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: 90%;
+  flex-wrap: wrap;
+}
+
+.main {
+  background-color: orange;
+  width: 55%;
+  height: 90%;
+  margin-bottom: 1%;
+}
+
+.sidebar {
+  background-color: green;
+  width: 25%;
+  height: 90%;
+  margin-left: 10%;
+  margin-right: 1%;
+  margin-bottom: 1%;
+}
+
+.lowbar {
+  background-color: gray;
+  margin-left: 10%;
+  width: 81%;
+  height: 10%;
+}
+

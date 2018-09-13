@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+
+<body>
+  <ul class="asteroids">
+    <li id="b325" class="asteroid">The King</li>
+    <li class="asteroid b326">The Conceited Man</li>
+  </ul>
+  <div class="container"></div>
+
+  <script>
+
+    const gfli = document.createElement('li');
+    gfli.textContent = 'The Green Fox';
+    const llli = document.createElement('li');
+    llli.textContent = 'The Lamplighter';
+    const heading = document.createElement('h1');
+    heading.textContent = 'I can add elements to the DOM!';
+    const img = document.createElement('img');
+    img.setAttribute('src', 'https://upload.wikimedia.org/wikipedia/commons/6/69/Grapevinesnail_01.jpg');
+
+    document.querySelector('ul.asteroids').appendChild(gfli);
+    document.querySelector('ul.asteroids').appendChild(llli);
+    document.querySelector('div.container').appendChild(heading);
+    document.querySelector('div.container').appendChild(img);
+
+  </script>
+
+</body>
+
+</html>

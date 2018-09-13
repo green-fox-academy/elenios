@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: innerHTML, textContent</title>
+</head>
+
+<body>
+  <ul>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+    <li>placeholder</li>
+  </ul>
+
+    <script>
+
+      const placeholders = document.getElementsByTagName('li');
+      const content = ['apple', 'banana', 'cat', 'dog'];
+
+      for (let i = 0; i < placeholders.length; i++) {
+        placeholders[i].textContent = content[i];
+      }
+
+    const ul = document.getElementsByTagName('ul');
+      ul[0].setAttribute('style', 'background-color: limegreen')
+
+    </script>
+
+</body>
+
+</html>
