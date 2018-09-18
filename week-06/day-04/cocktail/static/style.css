@@ -1,0 +1,39 @@
+th {
+  background-color: black;
+  margin-right: 5px;
+  color: white;
+  font-size: 25px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+table {
+  width: 33%;
+  margin-top: 20px;
+}
+
+.alcohols th {
+  background-color: white;
+  color: blue;
+  font-size: 20px;
+}
+
+tr td {
+  font-size: 20px;
+}
+
+.price {
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 34px;
+}
+
+
+tr:nth-child(odd) {
+ background: #fff2dd;
+}
+tr:nth-child(even) {
+ background: #fffaf2;
+}

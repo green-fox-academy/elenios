@@ -33,21 +33,23 @@ let giraffe1 = new Giraffe('Giraffe boy', 3, 'male');
 let giraffe2 = new Giraffe('Giraffe girl', 5, 'female');
 zoo.add(giraffe1);
 zoo.add(giraffe2);
-
+/*
 console.log("How do you breed?");
 console.log("A " + crocodile1.getName() + " is breeding by " + crocodile1.breedingMethod());
 console.log("A " + giraffe1.getName() + " is breeding by " + giraffe1.breedingMethod());
 console.log("A " + eagle1.getName() + " is breeding by " + eagle1.breedingMethod());
-
+*/
 console.log(giraffe1);
 
 let babygiraffe1: Giraffe = giraffe1.breed(giraffe2);
+
 giraffe1.play();
+
+babygiraffe1 = giraffe1.breed(giraffe2);
 
 giraffe1.play(giraffe2);
 
 let babygiraffe2: Giraffe = giraffe1.breed(giraffe2);
 
-console.log(babygiraffe1);
 console.log(babygiraffe2);
 

@@ -12,18 +12,15 @@
 
   </ul>
 
- Fill the list based on the following list of objects. Only add the asteroids to the list.
-  Each list item should have its category as a class and its content as text content. -->
   <script>
 
     let list = document.querySelectorAll('li');
+
     list.forEach(element => {
       if (element.textContent === 'The King') {
         document.querySelector('ul').removeChild(element);
       }
     });
-
-
 
     const planetData = [
       {
@@ -52,6 +49,16 @@
         asteroid: true,
       },
     ];
+
+    planetData.forEach(element => {
+      if (element.asteroid) {
+        const item = document.createElement('li');
+        item.textContent = element.content;
+        item.classList.add(element.category);
+        document.querySelector('ul').appendChild(item);
+      }
+    });
+
   </script>
 
 </body>

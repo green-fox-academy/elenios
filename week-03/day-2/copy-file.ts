@@ -18,3 +18,8 @@ function copy(filename: string, filename2: string): any {
 }
 
 console.log(copy('copy.txt', 'copy2.txt'));
+
+
+metodus, ami kap egy multi arrayt, negyetesm mennyi azon szamok atlaga 
+
+test iras 2 eset a 2 NavigationPreloadManager

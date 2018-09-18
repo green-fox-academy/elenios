@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>
+    Cocktail Pricelist
+  </title>
+  <link rel="stylesheet" type="text/css" href="/static/style.css">
+</head>
+
+<body>
+  <h1>Cocktails</h1>
+  <table class = alcohols>
+    <tr>
+    <th><a href="/">ALL</a></th>
+    <% for (let i = 0; i < filter.length; i++) { %> 
+          <th><a href="/alcohol/<%= filter[i] %>"><%=filter[i].toUpperCase()%></a></th>
+          <% } %>
+        </table>
+  <table>
+  <tr>
+    <th>NAME</th>
+    <th>PRICE</th>
+    </tr>
+    <% for (let i = 0; i < data.length; i++) { %> 
+      <% if (data[i].isAlcoholic === false && data[i].name.indexOf('non-alcoholic') === -1) {
+         data[i].name = data[i].name.concat(` (non-alcoholic)`)
+      } %>
+      <tr>
+        <td class = desc><%=data[i].name%><br><%=data[i].contains%></td>
+        <td class = price><%=data[i].price%></td>
+     <% } %>
+    </tr>
+  </table>
+</body> 
+
+</html> 

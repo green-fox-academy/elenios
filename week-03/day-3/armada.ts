@@ -18,7 +18,7 @@ class Armada {
   }
 
   fillArmada() {
-    let numberOfShips = Math.ceil(Math.random() * 10);
+    let numberOfShips = 10 + Math.ceil(Math.random() * 10);
     for (let i = 0; i < numberOfShips; i++) {
       this.listOfShips.push(new Ship);
     }
@@ -53,7 +53,7 @@ class Armada {
     }
   }
 }
-
+ 
 let snakes = new Armada('snakes');
 let blades = new Armada('blades');
 snakes.fillArmada();

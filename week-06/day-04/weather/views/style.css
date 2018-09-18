@@ -1,0 +1,22 @@
+#body {
+  font-style: 'Lato';
+}
+
+.mainpanel {
+  background-color: slategrey;
+  width: 50%;
+}
+
+.individualpanel {
+  margin: 40px; 
+  background-color: whitesmoke;
+  display: flex;
+}
+
+.location {
+  width: 40%;
+}
+
+.temp {
+  width: 40%;
+}
