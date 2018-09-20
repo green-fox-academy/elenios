@@ -8,9 +8,9 @@ const jsonParser = bodyParser.json();
 
 app.use('/assets', express.static('assets'));
 
-app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'assets/index.html'));
-});
+  app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'assets/index.html'));
+  });
 
 app.get('/doubling', (req, res) => {
   let input = req.query.input;
@@ -62,7 +62,7 @@ function sum(n) {
 function factor(n) {
   if (n === 1) {
     return n;
-  } else {
+  } else { 
     return n * sum(n - 1);
   }
 }
