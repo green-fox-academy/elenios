@@ -3,6 +3,7 @@ const hover = document.querySelector( '.hover' );
 const leave = document.querySelector( '.leave' );
 const key = document.querySelector( '.key' );
 const bubbling = document.querySelector( '.bubbling' );
+const form = document.querySelector( '.form' );
 
 const blur = document.querySelector( '.blur' );
 const change = document.querySelector( '.change' );
@@ -39,4 +40,16 @@ bubbling.addEventListener( 'click', () => {
   } else if ( event.target.dataset.action === 'two' ) {
     console.log( event.target.innerHTML );
   }
+} );
+
+form.addEventListener( 'submit', ( event ) => {
+  event.preventDefault();
+  const {blur, change, focus, select} = event.target.elements;
+  obj = { 
+    blur: blur.value,
+    focus: focus.value,
+    change: change.value,
+    select: select.value,
+  }
+  console.log(obj);
 } );
