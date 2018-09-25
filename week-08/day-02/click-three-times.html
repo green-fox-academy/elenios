@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: EventListeners</title>
+</head>
+
+<body>
+
+  <button>Button</button>
+  <p class="result"></p>
+
+  <script>
+    const button = document.querySelector( 'button' );
+    const result = document.querySelector( '.result' );
+    let event = () => {
+      button.addEventListener( 'click', ( event ) => {
+        if ( event.detail === 3 ) {
+          result.textContent = '5 seconds elapsed and clicked 3 times'
+        }
+      } )
+    };
+    
+    setTimeout( event, 5000 );
+  </script>
+</body>
+
+</html>
