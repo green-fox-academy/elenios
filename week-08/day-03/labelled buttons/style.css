@@ -4,34 +4,66 @@ body {
 
 i {
   font-size: 200%;
+  padding: 10px;
 }
 
 .container {
-  display: flex;
-  align-items: center;
   justify-content: center;
+  align-content: center;
   flex-wrap: wrap;
   justify-content: space-around;
-  width: 10%;
+  width: 20%;
   margin: auto;
   margin-top: 15%;
 }
 
 button {
   color: gainsboro;
-  width: 50px;
+  width: 150px;
   height: 50px;
-  border-radius: 10px;
-  margin: 20px;
+  margin: auto;
+  margin-bottom: 20px;
   border: 0cm;
   background-color: black;
+  justify-content: space-between;
+  display: flex;
+  padding: 0%;
+  line-height: 50px;
+  vertical-align: middle;
 }
 
 button[data-action] {
   visibility: hidden;
+}
+
+div[data-action] {
+  width: 100px;
+  height: 50px;
+  color: white;
+  margin: 0%;
+  font-size: 150%;
+}
+
+button[data-action="delete"] {
   color: red;
 }
 
-button:hover+button[data-action] {
+button[data-action="confirm"] {
+  color: green;
+}
+
+div[data-action="delete"] {
+  background-color: red;
+}
+
+div[data-action="confirm"] {
+  background-color: green;
+}
+
+button:hover~button[data-action] {
+  visibility: visible;
+}
+
+button:hover~div[data-action] {
   visibility: visible;
 }
