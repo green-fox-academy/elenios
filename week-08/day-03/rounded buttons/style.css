@@ -1,0 +1,63 @@
+body {
+  background-color: darkslateblue;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 40%;
+  margin: auto;
+  margin-top: 15%;
+}
+
+button {
+width: 150px;
+height: 50px;
+border-radius: 10px;
+margin: 20px;
+border: 0cm;
+color: white;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  filter: brightness(90%);
+}
+
+.blue {
+  box-shadow: 0px 6px 4px navy;
+  background-color: blue;
+}
+
+.green {
+  box-shadow: 0px 6px 4px darkgreen;
+  background-color: green;
+}
+
+.red {
+  box-shadow: 0px 6px 4px darkred;
+  background-color: red;
+}
+
+.light {
+  box-shadow: 0px 6px 4px rgb(16, 109, 109);
+  background-color: lightseagreen;
+}
+
+.black {
+  box-shadow: 0px 6px 4px black;
+  background-color: black;
+}
+
+.white {
+  background-color: whitesmoke;
+  color: black;
+}
+
+
