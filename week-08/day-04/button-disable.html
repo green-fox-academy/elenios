@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Button Disable</title>
+</head>
+
+<body>
+
+  <style>
+    body {
+      height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+  <div class="panel">
+
+    <form>
+      <fieldset>
+        <legend>What is your favorite pet?</legend>
+
+        <div>
+          <input type="radio" id="dog" name="animal" value="dog" checked />
+          <label for="dog">Dog</label>
+        </div>
+
+        <div>
+          <input type="radio" id="cat" name="animal" value="cat" />
+          <label for="cat">Cat</label>
+        </div>
+
+        <div>
+          <input type="radio" id="goldfish" name="animal" value="goldfish" />
+          <label for="goldfish">Goldfish</label>
+        </div>
+
+      </fieldset>
+
+      <br>
+
+      <fieldset>
+        <legend>Do you want to sign up for cat facts?</legend>
+
+        <div>
+          <input type="radio" id="yes" name="answer" value="yes" checked />
+          <label for="yes">Yes</label>
+        </div>
+
+        <div>
+          <input type="radio" id="no" name="answer" value="no" />
+          <label for="no">No</label>
+        </div>
+
+      </fieldset>
+
+      <br>
+
+      <button type="lovecats" disabled>I love cats</button>
+      <button type="signup" disabled>Sign up</button>
+    </form>
+
+    <script>
+
+      const button = document.querySelector('button');
+
+
+    </script>
+
+  </div>
+
+</body>
+
+</html>
