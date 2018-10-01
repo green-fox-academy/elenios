@@ -3,9 +3,10 @@
 const routes = require( './routes' );
 const port = 3000;
 
-const app = require( 'express' ).express();
+const express = require( 'express' );
+const app = express();
 
 routes.listen( port, () => {
-  console.log( 'Server running on oirt %d', port );
+  console.log( 'Server running on %d', port );
 } );
 
