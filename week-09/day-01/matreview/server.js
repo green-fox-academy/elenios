@@ -1,12 +1,12 @@
 'use strict';
 
-const routes = require( './routes' );
+const routesModule = require( './routes' );
 const port = 3000;
 
 const express = require( 'express' );
 const app = express();
 
-routes.listen( port, () => {
+routesModule.app.listen( port, () => {
   console.log( 'Server running on %d', port );
 } );
 
