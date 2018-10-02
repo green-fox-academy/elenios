@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Reddit</title>
+  <script type="text/javascript" src="/assets/script.js"></script>
+</head>
+
+<body>
+
+  <style>
+
+    img {
+      border-radius: 5px;
+    }
+
+    body {
+      display: flex;
+      font-style: 'Arial';
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .main {
+      background-color: lightslategray;
+      display: flex;
+      width: 73%;
+      margin-top: 10px;
+      padding-left: 1%;
+      padding-right: 1%;
+      border-radius: 5px;
+    }
+
+    .posts {
+      width: 65%;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 35%;
+      padding-top: 1%;
+    }
+
+    .panel {
+      background-color: lightgoldenrodyellow;
+      margin: 10px 0px;
+      display: flex;
+      height: 100px;
+      border-radius: 10px;
+    }
+
+    .textPanel {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    .votePanel {
+      width: 15%;
+      height: 100px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .vote {
+      font-size: 22px;
+    }
+
+    .title {
+      font-size: 22px;
+      letter-spacing: 5px;
+    }
+
+    .url {
+      font-size: 10px;
+      margin-top: 8px;
+    }
+
+    .submitted {
+      font-size: 14px;
+      width: 200px;
+    }
+
+  </style>
+
+
+  <img src="assets/banner.jpg" width="75%"></img>
+
+  <div class="main">
+
+    <div class="posts">
+    </div>
+
+    <div class="menu">
+
+      <div class="login">
+        <form>
+          <div>
+            <label for="name">USERNAME</label> <br>
+            <input type="text" id="name" name="user_name"> <br>
+          </div>
+          <div>
+            <label for="password">PASSWORD</label> <br>
+            <input type="password" id="password" name="password">
+          </div>  
+          <button type="login">Login</button>
+        </form>
+      </div>
+
+      <a href="http://localhost:666/new/"><button type="newpost" url>NEW POST</button></a>
+
+    </div>
+
+  </div>
+
+
+
+</body>
+
+</html>

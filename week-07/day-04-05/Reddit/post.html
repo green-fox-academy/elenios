@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  
+    <div class="submit">
+        <p>Create your post</p>
+        <form action="/posts/" method="POST" enctype="application/json">
+            <div>
+                <label for="title">Enter your title</label> <br>
+                <input type="text" id="title" name="title"> <br>
+              </div>
+              <div>
+                <label for="url">Enter your url</label> <br>
+                <input type="url" id="url" name="url">
+              </div>  
+              <div>
+                  <label for="owner">Enter your name</label> <br>
+                  <input type="text" id="owner" name="owner">
+                </div>  
+          <button type="submit">submit</button>
+        </form>
+      </div>
+  
+  
+</body>
+</html>
