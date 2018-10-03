@@ -46,11 +46,13 @@ window.onload = () => {
         downvoteImg.setAttribute( "src", "./assets/downvote.png" );
 
         let title = document.createElement( 'div' );
+        title.dataset.id = id;
         title.classList.add( 'title' );
         title.textContent = element.title;
         textPanel.appendChild( title );
 
         let url = document.createElement( 'div' );
+        url.dataset.id = id;
         url.classList.add( 'url' );
         url.textContent = `(${ element.url })`;
         textPanel.appendChild( url );
@@ -69,11 +71,61 @@ window.onload = () => {
         edit.innerHTML = 'Edit';
         buttonPanel.appendChild( edit );
 
-        edit.addEventListener( 'click', () => {
-          alert( id )
-        } );
+        let update = document.createElement( 'button' );
+        update.classList.add( 'update' );
+        update.innerHTML = 'Update Post';
 
-        let remove = document.createElement( 'button' );
+        edit.addEventListener( 'click', () => {
+
+          let form = document.createElement( 'form' );
+          form.setAttribute = ( 'method', 'put' );
+          form.setAttribute = ( 'action', '/posts/' )
+          let newTitle = document.createElement( 'input' );
+          newTitle.setAttribute( 'type', "text" );
+          newTitle.setAttribute( 'name', "title" );
+          newTitle.setAttribute( 'id', "title" );
+          let newUrl = document.createElement( 'input' );
+          newUrl.setAttribute( 'type', "url" );
+          newUrl.setAttribute( 'name', "url" );
+          newUrl.setAttribute( 'id', "url" );
+          buttonPanel.appendChild( newTitle );
+          buttonPanel.appendChild( newUrl );
+          buttonPanel.appendChild( update );
+          
+          update.addEventListener( 'click', () => {
+            
+            fetch( `${ host }/posts/${ id }/`, {
+              method: 'put',
+            headers: {
+              "Content-Type": "application/json; charset=utf-8",
+            },
+            body: JSON.stringify({
+              title: newTitle.value,
+              url: newUrl.value
+            })
+            
+          } )
+            .then( ( resp ) => {
+              let posts = document.querySelector( '.posts' );
+              let titles = document.querySelectorAll( '.title' );
+              let urls = document.querySelectorAll('.url');
+              
+              titles.forEach( ( element ) => {
+                if ( id == element.dataset.id ) {
+                  element.innerHTML = newTitle.value;
+                }
+              } );
+
+              urls.forEach( ( element ) => {
+                if ( id == element.dataset.id ) {
+                  element.innerHTML = newUrl.value;
+                }
+              } );
+            } )
+          } );
+        } );
+          
+          let remove = document.createElement( 'button' );
         remove.classList.add( 'remove' );
         remove.innerHTML = 'Remove';
         buttonPanel.appendChild( remove );
@@ -86,14 +138,13 @@ window.onload = () => {
               let posts = document.querySelector( '.posts' );
               let panels = document.querySelectorAll( '.panel' );
 
-              panels.forEach( ( element ) => {            
+              panels.forEach( ( element ) => {
                 if ( id == element.dataset.id ) {
                   posts.removeChild( element );
                 }
               } );
             } )
         } );
-
       } );
     } );
 } 
