@@ -52,23 +52,16 @@ app.get( '/posts/', ( req, res ) => {
 app.post( '/posts/', jsonParser, ( req, res ) => {
   let title = req.body.title;
   let url = req.body.url;
-  let owner = req.body.owner;
-console.log(req.body);
 
-  conn.query( `INSERT INTO post (title, url, owner) values (?, ?, ?);`, [title, url, owner], ( err, result ) => {
+  conn.query( `INSERT INTO post (title, url) values (?, ?);`, [title, url], ( err, result ) => {
 
-    let newId = result.insertId;
     if ( err ) {
       console.log( 'failure', err.message );
       return;
     }
 
-    conn.query( `SELECT * FROM post WHERE post_id = ${ newId };`, ( err, result2 ) => {
+    res.redirect('/');
 
-      res.json( {
-        result: result2
-      } );
-    } );
   } );
 } );
 
@@ -114,7 +107,9 @@ app.delete( '/posts/:id', ( req, res ) => {
       console.log( 'failure', err.message );
       return;
     }
-    res.status( 204 ).send();
+    res.json({
+      deleted: true
+    });
   } );
 } );
 
